@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2FA77FD4-7DDE-3084-9A5B-F1586F737CB4}</ProjectGuid>
+    <RootNamespace>worldcoin-qt</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <PlatformToolSet>v120</PlatformToolSet>
+    <OutputDirectory>release\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>build\</IntermediateDirectory>
+    <PrimaryOutput>worldcoin-qt</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <PlatformToolSet>v120</PlatformToolSet>
+    <OutputDirectory>release\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>build\</IntermediateDirectory>
+    <PrimaryOutput>worldcoin-qt</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <PlatformToolSet>v120</PlatformToolSet>
+    <OutputDirectory>debug\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>build\</IntermediateDirectory>
+    <PrimaryOutput>worldcoin-qt</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <PlatformToolSet>v120</PlatformToolSet>
+    <OutputDirectory>debug\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>build\</IntermediateDirectory>
+    <PrimaryOutput>worldcoin-qt</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">build\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">worldcoin</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">WorldcoinDaemon</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</IgnoreImportLibrary>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">build\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">worldcoin</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">worldcoin</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</IgnoreImportLibrary>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>json;\usr\include\miniupnpc;leveldb\include;leveldb\helpers;build;$(OPENSSL)\inc32;$(BOOST_ROOT)\;$(BERKELEY_DB)\build_windows;$(MINIUPNPC);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>build\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>build\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;BOOST_THREAD_USE_LIB;BOOST_SPIRIT_THREADSAFE;STATICLIB;USE_IPV6=1;WIN32_LEAN_AND_MEAN;_MT;USE_UPNP=1;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>
+      </ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>miniupnpc.lib;iphlpapi.lib;ssleay32.lib;libeay32.lib;libdb60.lib;ws2_32.lib;shlwapi.lib;mswsock.lib;ole32.lib;oleaut32.lib;uuid.lib;libboost_system-vc120-mt-1_55.lib;libboost_filesystem-vc120-mt-1_55.lib;libboost_program_options-vc120-mt-1_55.lib;libboost_thread-vc120-mt-1_55.lib;libboost_chrono-vc120-mt-1_55.lib;libboost_date_time-vc120-mt-1_55.lib;libboost_regex-vc120-mt-1_55.lib;gdi32.lib;user32.lib;leveldb.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(MINIUPNPC)\msvc\Release;$(OPENSSL)\out32;$(BERKELEY_DB)\build_windows\Win32\Release;$(BOOST_ROOT)\bin.v2\libs\system\build\msvc-12.0\release\link-static\threading-multi;$(BOOST_ROOT)\bin.v2\libs\filesystem\build\msvc-12.0\release\link-static\threading-multi;$(BOOST_ROOT)\bin.v2\libs\program_options\build\msvc-12.0\release\link-static\threading-multi;$(BOOST_ROOT)\bin.v2\libs\thread\build\msvc-12.0\release\link-static\threading-multi;$(BOOST_ROOT)\bin.v2\libs\chrono\build\msvc-12.0\release\link-static\threading-multi;$(BOOST_ROOT)\bin.v2\libs\date_time\build\msvc-12.0\release\link-static\threading-multi;$(BOOST_ROOT)\bin.v2\libs\regex\build\msvc-12.0\release\link-static\threading-multi;.\leveldb\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>-Wl,--dynamicbase -Wl,--nxcompat -Wl,--large-address-aware %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkIncremental>false</LinkIncremental>
+      <OutputFile>$(OutDir)\worldcoin.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <Version>0.862</Version>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_FORTIFY_SOURCE=2;_WINDOWS;UNICODE;WIN32;QT_GUI;BOOST_THREAD_USE_LIB;BOOST_SPIRIT_THREADSAFE;USE_UPNP=1;STATICLIB;USE_IPV6=1;WIN32;WIN32_LEAN_AND_MEAN;_MT;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_NETWORK_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_OPENGL_ES_2;QT_OPENGL_ES_2_ANGLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>json;\usr\include\miniupnpc;leveldb\include;leveldb\helpers;build;$(LIBRARIES)\OpenSSL\include;$(LIBRARIES)\Boost\include;$(LIBRARIES)\BerkeleyDB\include;$(LIBRARIES)\MiniUPNPC\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>build\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>build\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;BOOST_THREAD_USE_LIB;BOOST_SPIRIT_THREADSAFE;STATICLIB;USE_IPV6=1;WIN32_LEAN_AND_MEAN;_MT;USE_UPNP=1;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>
+      </ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>miniupnpc.lib;iphlpapi.lib;ssleay32.lib;libeay32.lib;libdb60s.lib;ws2_32.lib;shlwapi.lib;mswsock.lib;ole32.lib;oleaut32.lib;uuid.lib;libboost_system-vc120-mt-s-1_57.lib;libboost_filesystem-vc120-mt-s-1_57.lib;libboost_program_options-vc120-mt-s-1_57.lib;libboost_thread-vc120-mt-s-1_57.lib;libboost_chrono-vc120-mt-s-1_57.lib;libboost_date_time-vc120-mt-s-1_57.lib;libboost_regex-vc120-mt-s-1_57.lib;gdi32.lib;user32.lib;leveldb.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(LIBRARIES)\MiniUPNPC\lib;$(LIBRARIES)\OpenSSL\lib;$(LIBRARIES)\BerkeleyDB\lib64;$(LIBRARIES)\Boost\lib;.\leveldb\x64\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>-Wl,--dynamicbase -Wl,--nxcompat -Wl,--large-address-aware %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkIncremental>false</LinkIncremental>
+      <OutputFile>$(OutDir)\WorldcoinDaemon.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <Version>0.863</Version>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_FORTIFY_SOURCE=2;_WINDOWS;UNICODE;WIN32;QT_GUI;BOOST_THREAD_USE_LIB;BOOST_SPIRIT_THREADSAFE;USE_UPNP=1;STATICLIB;USE_IPV6=1;WIN32;WIN32_LEAN_AND_MEAN;_MT;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_NETWORK_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_OPENGL_ES_2;QT_OPENGL_ES_2_ANGLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>json;leveldb\include;leveldb\helpers;build;$(OPENSSL)\inc32;$(BOOST_ROOT)\;$(BERKELEY_DB)\build_windows;$(QTDIR)\include\QtMultimedia;$(MINIUPNPC);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>build\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>build\</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_FORTIFY_SOURCE=2;_WINDOWS;UNICODE;WIN32;BOOST_THREAD_USE_LIB;BOOST_SPIRIT_THREADSAFE;STATICLIB;USE_IPV6=1;WIN32_LEAN_AND_MEAN;_MT;USE_UPNP=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>miniupnpc.lib;iphlpapi.lib;ssleay32.lib;libeay32.lib;libdb60d.lib;ws2_32.lib;shlwapi.lib;mswsock.lib;ole32.lib;oleaut32.lib;uuid.lib;libboost_system-vc120-mt-gd-1_55.lib;libboost_filesystem-vc120-mt-gd-1_55.lib;libboost_program_options-vc120-mt-gd-1_55.lib;libboost_thread-vc120-mt-gd-1_55.lib;libboost_chrono-vc120-mt-gd-1_55.lib;libboost_date_time-vc120-mt-gd-1_55.lib;libboost_regex-vc120-mt-gd-1_55.lib;gdi32.lib;user32.lib;leveldb.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(MINIUPNPC)\msvc\Debug;$(OPENSSL)\out32;$(BERKELEY_DB)\build_windows\Win32\Debug;$(BOOST_ROOT)\bin.v2\libs\system\build\msvc-12.0\debug\link-static\threading-multi;$(BOOST_ROOT)\bin.v2\libs\filesystem\build\msvc-12.0\debug\link-static\threading-multi;$(BOOST_ROOT)\bin.v2\libs\program_options\build\msvc-12.0\debug\link-static\threading-multi;$(BOOST_ROOT)\bin.v2\libs\thread\build\msvc-12.0\debug\link-static\threading-multi;$(BOOST_ROOT)\bin.v2\libs\chrono\build\msvc-12.0\debug\link-static\threading-multi;$(BOOST_ROOT)\bin.v2\libs\date_time\build\msvc-12.0\debug\link-static\threading-multi;$(BOOST_ROOT)\bin.v2\libs\regex\build\msvc-12.0\debug\link-static\threading-multi;.\leveldb\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>-Wl,--dynamicbase -Wl,--nxcompat -Wl,--large-address-aware -static "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <OutputFile>$(OutDir)\worldcoin.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <Version>0.862</Version>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_FORTIFY_SOURCE=2;_WINDOWS;UNICODE;WIN32;QT_GUI;BOOST_THREAD_USE_LIB;BOOST_SPIRIT_THREADSAFE;USE_UPNP=1;STATICLIB;USE_IPV6=1;WIN32;WIN32_LEAN_AND_MEAN;_MT;QT_WIDGETS_LIB;QT_NETWORK_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_OPENGL_ES_2;QT_OPENGL_ES_2_ANGLE;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>json;leveldb\include;leveldb\helpers;build;$(OPENSSL)\inc32;$(BOOST_ROOT)\;$(BERKELEY_DB)\build_windows;$(QTDIR)\include\QtMultimedia;$(MINIUPNPC);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>build\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>build\</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_FORTIFY_SOURCE=2;_WINDOWS;UNICODE;WIN32;BOOST_THREAD_USE_LIB;BOOST_SPIRIT_THREADSAFE;STATICLIB;USE_IPV6=1;WIN32_LEAN_AND_MEAN;_MT;USE_UPNP=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>miniupnpc.lib;iphlpapi.lib;ssleay32.lib;libeay32.lib;libdb60d.lib;ws2_32.lib;shlwapi.lib;mswsock.lib;ole32.lib;oleaut32.lib;uuid.lib;libboost_system-vc120-mt-gd-1_55.lib;libboost_filesystem-vc120-mt-gd-1_55.lib;libboost_program_options-vc120-mt-gd-1_55.lib;libboost_thread-vc120-mt-gd-1_55.lib;libboost_chrono-vc120-mt-gd-1_55.lib;libboost_date_time-vc120-mt-gd-1_55.lib;libboost_regex-vc120-mt-gd-1_55.lib;gdi32.lib;user32.lib;leveldb.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(MINIUPNPC)\msvc\Debug;$(OPENSSL)\out32;$(BERKELEY_DB)\build_windows\Win32\Debug;$(BOOST_ROOT)\bin.v2\libs\system\build\msvc-12.0\debug\link-static\threading-multi;$(BOOST_ROOT)\bin.v2\libs\filesystem\build\msvc-12.0\debug\link-static\threading-multi;$(BOOST_ROOT)\bin.v2\libs\program_options\build\msvc-12.0\debug\link-static\threading-multi;$(BOOST_ROOT)\bin.v2\libs\thread\build\msvc-12.0\debug\link-static\threading-multi;$(BOOST_ROOT)\bin.v2\libs\chrono\build\msvc-12.0\debug\link-static\threading-multi;$(BOOST_ROOT)\bin.v2\libs\date_time\build\msvc-12.0\debug\link-static\threading-multi;$(BOOST_ROOT)\bin.v2\libs\regex\build\msvc-12.0\debug\link-static\threading-multi;.\leveldb\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>-Wl,--dynamicbase -Wl,--nxcompat -Wl,--large-address-aware -static "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <OutputFile>$(OutDir)\worldcoin.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <Version>0.862</Version>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_FORTIFY_SOURCE=2;_WINDOWS;UNICODE;WIN32;QT_GUI;BOOST_THREAD_USE_LIB;BOOST_SPIRIT_THREADSAFE;USE_UPNP=1;STATICLIB;USE_IPV6=1;WIN32;WIN32_LEAN_AND_MEAN;_MT;QT_WIDGETS_LIB;QT_NETWORK_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_OPENGL_ES_2;QT_OPENGL_ES_2_ANGLE;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="addrman.cpp" />
+    <ClCompile Include="alert.cpp" />
+    <ClCompile Include="bloom.cpp" />
+    <ClCompile Include="checkpoints.cpp" />
+    <ClCompile Include="checkpointsync.cpp" />
+    <ClCompile Include="crypter.cpp" />
+    <ClCompile Include="db.cpp" />
+    <ClCompile Include="hash.cpp" />
+    <ClCompile Include="init.cpp" />
+    <ClCompile Include="key.cpp" />
+    <ClCompile Include="keystore.cpp" />
+    <ClCompile Include="leveldb.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="net.cpp" />
+    <ClCompile Include="netbase.cpp" />
+    <ClCompile Include="noui.cpp" />
+    <ClCompile Include="protocol.cpp" />
+    <ClCompile Include="rpcblockchain.cpp" />
+    <ClCompile Include="rpcdump.cpp" />
+    <ClCompile Include="rpcmining.cpp" />
+    <ClCompile Include="rpcnet.cpp" />
+    <ClCompile Include="rpcrawtransaction.cpp" />
+    <ClCompile Include="rpcwallet.cpp" />
+    <ClCompile Include="script.cpp" />
+    <ClCompile Include="scrypt.cpp" />
+    <ClCompile Include="sync.cpp" />
+    <ClCompile Include="txdb.cpp" />
+    <ClCompile Include="util.cpp" />
+    <ClCompile Include="version.cpp" />
+    <ClCompile Include="wallet.cpp" />
+    <ClCompile Include="walletdb.cpp" />
+    <ClCompile Include="worldcoinrpc.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="addrman.h" />
+    <ClInclude Include="alert.h" />
+    <ClInclude Include="allocators.h" />
+    <ClInclude Include="base58.h" />
+    <ClInclude Include="bignum.h" />
+    <ClInclude Include="bloom.h" />
+    <ClInclude Include="checkpoints.h" />
+    <ClInclude Include="checkqueue.h" />
+    <ClInclude Include="clientversion.h" />
+    <ClInclude Include="coincontrol.h" />
+    <ClInclude Include="compat.h" />
+    <ClInclude Include="crypter.h" />
+    <ClInclude Include="db.h" />
+    <ClInclude Include="hash.h" />
+    <ClInclude Include="init.h" />
+    <ClInclude Include="json\json_spirit.h" />
+    <ClInclude Include="json\json_spirit_error_position.h" />
+    <ClInclude Include="json\json_spirit_reader.h" />
+    <ClInclude Include="json\json_spirit_reader_template.h" />
+    <ClInclude Include="json\json_spirit_stream_reader.h" />
+    <ClInclude Include="json\json_spirit_utils.h" />
+    <ClInclude Include="json\json_spirit_value.h" />
+    <ClInclude Include="json\json_spirit_writer.h" />
+    <ClInclude Include="json\json_spirit_writer_template.h" />
+    <ClInclude Include="key.h" />
+    <ClInclude Include="keystore.h" />
+    <ClInclude Include="leveldb.h" />
+    <ClInclude Include="limitedmap.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="mruset.h" />
+    <ClInclude Include="net.h" />
+    <ClInclude Include="netbase.h" />
+    <ClInclude Include="protocol.h" />
+    <ClInclude Include="script.h" />
+    <ClInclude Include="scrypt.h" />
+    <ClInclude Include="serialize.h" />
+    <ClInclude Include="sync.h" />
+    <ClInclude Include="threadsafety.h" />
+    <ClInclude Include="txdb.h" />
+    <ClInclude Include="ui_interface.h" />
+    <ClInclude Include="uint256.h" />
+    <ClInclude Include="util.h" />
+    <ClInclude Include="version.h" />
+    <ClInclude Include="wallet.h" />
+    <ClInclude Include="walletdb.h" />
+    <ClInclude Include="worldcoinrpc.h" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
