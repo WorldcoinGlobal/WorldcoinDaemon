@@ -19,7 +19,7 @@ Worldcoin is an improved version of Bitcoin using Scrypt as a proof-of-work algo
 
 
 For more information, as well as an immediately usable, binary version of
-the Worldcoin client software, see http://www.worldcoin.gloabl
+the Worldcoin client software, see http://www.worldcoin.global
 
 License
 -------
