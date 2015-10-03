@@ -39,13 +39,13 @@ export LIBRARIES=<library dir>
 
 	tar -xzvf miniupnpc-1.9.tar.gz
 	cd miniupnpc-1.9
-	INSTALLPREFIX=$LIBRARIES/MiniUPNPC make install-static
+	INSTALLPREFIX=$LIBRARIES/MiniUPNPC make install
 
  - BerkeleyDB  -- [TAGS] (http://www.oracle.com/technetwork/database/database-technologies/berkeleydb/downloads/index-082944.html)
    ----------
 
-	tar -xzvf db-6.0.30.NC.tar.gz
-        cd db-6.0.30.NC/build_unix
+	tar -xzvf db-6.0.35.NC.tar.gz
+        cd db-6.0.35.NC/build_unix
 	../dist/configure --enable-cxx --prefix=$LIBRARIES/BerkeleyDB --disable-shared
 	make
 	make install
