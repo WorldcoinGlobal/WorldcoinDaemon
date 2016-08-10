@@ -8,7 +8,7 @@
 // Name of client reported in the 'version' message. Report the same name
 // for both worldcoind and worldcoin-qt, to make it harder for attackers to
 // target servers or GUI users specifically.
-const std::string CLIENT_NAME("Worldcoin BC");
+const std::string CLIENT_NAME("Worldcoin Business Center");
 
 // Client version number
 // -Alpha, -Beta, -RC, -Release
@@ -38,8 +38,8 @@ const std::string CLIENT_NAME("Worldcoin BC");
 // This version is no longer the git ID, but the alpha name for the wallet version 2014 
 #define GIT_ARCHIVE 1
 #ifdef GIT_ARCHIVE
-#    define GIT_COMMIT_ID "Chunky Monkey"
-#    define GIT_COMMIT_DATE "Thu, 12 FEB 2015 08:16:02 -0400"
+#    define GIT_COMMIT_ID "Flirtatious Ant"
+#    define GIT_COMMIT_DATE "Mon,  OCT 2015 08:16:02 -0400"
 #endif
 
 #define BUILD_DESC_FROM_COMMIT(maj,min,rev,build,commit) \
